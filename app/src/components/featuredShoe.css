@@ -1,0 +1,42 @@
+.featured-shoe {
+    width: 100%;
+
+    .top {
+        width: 100%;
+        text-align: center;
+        padding: 100px 20px;
+        color: #000;
+        font-family: 'Montserrat';
+
+        h1 {
+            font-weight: 1000;
+            text-transform: uppercase;
+        }
+
+        button {
+            border-radius: 1000px;
+            background-color: #000;
+            color: #fff;
+            font-weight: 600;
+            padding: 7px 16px;
+            border: none;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 3 / 1;
+        object-position: center;
+        object-fit: cover;
+    }
+}
+@media (max-width: 1200px) {
+    .featured-shoe {
+        img {
+            aspect-ratio: 1 / 1;
+        }
+    }
+}

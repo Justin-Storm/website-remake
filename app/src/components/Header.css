@@ -1,0 +1,46 @@
+#headerCarousel {
+    height: calc(100vh - 60px - 40px);
+
+    .carousel-inner {
+        height: 100%;
+
+        .carousel-item {
+            height: 100%;
+            width: 100%;
+
+            .content {
+                padding: 50px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-family: 'Montserrat';
+
+                h1 {
+                    font-weight: 900;
+                }
+                p {
+                    font-weight: 700;
+                }
+                h1, p {
+                    width: 500px;
+                    text-align: center;
+                    text-shadow: 0 0 10px #000;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    #headerCarousel {
+        height: 60vh;
+    }
+}
+@media (max-width: 768px) {
+    #headerCarousel {
+        height: 80vh;
+    }
+}

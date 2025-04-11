@@ -1,0 +1,37 @@
+.shoe {
+    width: 300px;
+    aspect-ratio: 9 / 12.5;
+    background: linear-gradient(to bottom, #000, #252525);
+    flex-shrink: 0;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        color: #fff;
+
+        &.index {
+            top: 10px;
+            right: 10px;
+            left: unset;
+            transform: translateX(0);
+        }
+    }
+
+    img {
+        position: absolute;
+        top: 40%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+}
+@media (max-width: 768px) {
+    .shoe {
+        width: 250px;
+    }
+}
+

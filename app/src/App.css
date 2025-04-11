@@ -1,0 +1,142 @@
+.App {
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  background: #f8f9fa;
+  overflow-x: hidden;
+}
+
+.app-content {
+  padding: 20px 0;
+  height: auto;
+}
+
+.sports-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.classics-container {
+  margin: 100px 0;
+  position: relative;
+
+  h3 {
+    font-family: 'Montserrat';
+    margin-left: 25px;
+  }
+
+  button.arrow {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px #000;
+
+    svg {
+      fill: #000;
+      width: 14px;
+      height: 14px;
+    }
+
+    &.back {
+      left: 50px;
+    }
+    &.forward {
+      right: 50px;
+    }
+  }
+
+  .shoes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & > * {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+
+    .snap-spacer {
+      width: 5px;
+      height: 100%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .classics-container {
+    button.arrow {
+      display: none;
+    }
+  }
+}
+
+.sticky-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: sticky;
+  top: -70px;
+  background-color: #f8f9fa;
+  z-index: 101;
+  margin-bottom: 100px;
+
+
+  img {
+    width: 100px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+  }
+
+  a {
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .sticky-links {
+    top: -50px;
+    img {
+      width: 50px;
+    }
+    .links {
+      justify-content: flex-start;
+    }
+  }
+}
